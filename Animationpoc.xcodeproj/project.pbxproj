@@ -13,6 +13,9 @@
 		E80879BD1F0FA38C00DA3BDC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E80879BB1F0FA38C00DA3BDC /* Main.storyboard */; };
 		E80879BF1F0FA38D00DA3BDC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E80879BE1F0FA38D00DA3BDC /* Assets.xcassets */; };
 		E80879C21F0FA38D00DA3BDC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E80879C01F0FA38D00DA3BDC /* LaunchScreen.storyboard */; };
+		E80879CA1F0FB39B00DA3BDC /* MasterTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E80879C91F0FB39B00DA3BDC /* MasterTableViewController.swift */; };
+		E80879CC1F0FB4C500DA3BDC /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E80879CB1F0FB4C500DA3BDC /* DetailViewController.swift */; };
+		E80879CE1F0FB5E400DA3BDC /* Monoster.swift in Sources */ = {isa = PBXBuildFile; fileRef = E80879CD1F0FB5E400DA3BDC /* Monoster.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +29,9 @@
 		E80879BE1F0FA38D00DA3BDC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E80879C11F0FA38D00DA3BDC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E80879C31F0FA38D00DA3BDC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E80879C91F0FB39B00DA3BDC /* MasterTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterTableViewController.swift; sourceTree = "<group>"; };
+		E80879CB1F0FB4C500DA3BDC /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		E80879CD1F0FB5E400DA3BDC /* Monoster.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Monoster.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +82,9 @@
 				E80879BE1F0FA38D00DA3BDC /* Assets.xcassets */,
 				E80879C01F0FA38D00DA3BDC /* LaunchScreen.storyboard */,
 				E80879C31F0FA38D00DA3BDC /* Info.plist */,
+				E80879C91F0FB39B00DA3BDC /* MasterTableViewController.swift */,
+				E80879CB1F0FB4C500DA3BDC /* DetailViewController.swift */,
+				E80879CD1F0FB5E400DA3BDC /* Monoster.swift */,
 			);
 			path = Animationpoc;
 			sourceTree = "<group>";
@@ -211,7 +220,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				E80879BA1F0FA38C00DA3BDC /* ViewController.swift in Sources */,
+				E80879CA1F0FB39B00DA3BDC /* MasterTableViewController.swift in Sources */,
 				E80879B81F0FA38C00DA3BDC /* AppDelegate.swift in Sources */,
+				E80879CE1F0FB5E400DA3BDC /* Monoster.swift in Sources */,
+				E80879CC1F0FB4C500DA3BDC /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -389,6 +401,7 @@
 				E80879C81F0FA38D00DA3BDC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
