@@ -16,6 +16,7 @@
 		E80879CA1F0FB39B00DA3BDC /* MasterTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E80879C91F0FB39B00DA3BDC /* MasterTableViewController.swift */; };
 		E80879CC1F0FB4C500DA3BDC /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E80879CB1F0FB4C500DA3BDC /* DetailViewController.swift */; };
 		E80879CE1F0FB5E400DA3BDC /* Monoster.swift in Sources */ = {isa = PBXBuildFile; fileRef = E80879CD1F0FB5E400DA3BDC /* Monoster.swift */; };
+		E88E9D741F13BF2100EEB869 /* servishero_loading.json in Resources */ = {isa = PBXBuildFile; fileRef = E88E9D731F13BF2100EEB869 /* servishero_loading.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		E80879C91F0FB39B00DA3BDC /* MasterTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterTableViewController.swift; sourceTree = "<group>"; };
 		E80879CB1F0FB4C500DA3BDC /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		E80879CD1F0FB5E400DA3BDC /* Monoster.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Monoster.swift; sourceTree = "<group>"; };
+		E88E9D731F13BF2100EEB869 /* servishero_loading.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = servishero_loading.json; path = ../../../Downloads/servishero_loading.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +87,7 @@
 				E80879C91F0FB39B00DA3BDC /* MasterTableViewController.swift */,
 				E80879CB1F0FB4C500DA3BDC /* DetailViewController.swift */,
 				E80879CD1F0FB5E400DA3BDC /* Monoster.swift */,
+				E88E9D731F13BF2100EEB869 /* servishero_loading.json */,
 			);
 			path = Animationpoc;
 			sourceTree = "<group>";
@@ -160,6 +163,7 @@
 			files = (
 				E80879C21F0FA38D00DA3BDC /* LaunchScreen.storyboard in Resources */,
 				E80879BF1F0FA38D00DA3BDC /* Assets.xcassets in Resources */,
+				E88E9D741F13BF2100EEB869 /* servishero_loading.json in Resources */,
 				E80879BD1F0FA38C00DA3BDC /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
