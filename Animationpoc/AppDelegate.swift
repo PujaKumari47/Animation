@@ -19,11 +19,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let splitViewController = self.window!.rootViewController as! UISplitViewController
         let leftNavController = splitViewController.viewControllers.first as! UINavigationController
         let masterTableViewController = leftNavController.topViewController as! MasterTableViewController
-        let detailViewController = splitViewController.viewControllers.last as! DetailViewController
+        let rightNavController = splitViewController.viewControllers.last as! UINavigationController
+        let detailViewController = rightNavController.topViewController as! DetailViewController
+        detailViewController.navigationItem.leftItemsSupplementBackButton = true
+        detailViewController.navigationItem.leftBarButtonItem = splitViewController.displayModeButtonItem
         
         let firstMonster = masterTableViewController.monsters.first
         detailViewController.monster = firstMonster
-        
+        masterTableViewController.delegate = detailViewController
         return true
         
     }

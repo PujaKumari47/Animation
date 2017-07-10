@@ -7,10 +7,12 @@
 //
 
 import UIKit
-
+protocol MonsterSelectionDelegate: class {
+    func monsterSelected(newMonster: Monster)
+}
 class MasterTableViewController: UITableViewController {
     var monsters = [Monster]()
-
+    weak var delegate: MonsterSelectionDelegate?
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -24,13 +26,13 @@ class MasterTableViewController: UITableViewController {
         self.monsters.append(Monster(name: "Dog-Bot", description: "BOW-WOW",
                                      iconName: "Image-1.png", weapon: Weapon.Blowgun))
         self.monsters.append(Monster(name: "Explode-Bot", description: "BOOM!",
-                                     iconName: "meetexplodebot.png", weapon: Weapon.Smoke))
+                                     iconName: "ninjastar.png", weapon: Weapon.Smoke))
         self.monsters.append(Monster(name: "Fire-Bot", description: "Will Make You Stamed",
-                                     iconName: "meetfirebot.png", weapon: Weapon.NinjaStar))
+                                     iconName: "smoke.png", weapon: Weapon.NinjaStar))
         self.monsters.append(Monster(name: "Ice-Bot", description: "Has A Chilling Effect",
-                                     iconName: "meeticebot.png", weapon: Weapon.Fire))
+                                     iconName: "sword.png", weapon: Weapon.Fire))
         self.monsters.append(Monster(name: "Mini-Tomato-Bot", description: "Extremely Handsome",
-                                     iconName: "meetminitomatobot.png", weapon: Weapon.NinjaStar))
+                                     iconName: "fire.png", weapon: Weapon.NinjaStar))
     }
     
 
@@ -54,7 +56,15 @@ class MasterTableViewController: UITableViewController {
         cell.textLabel?.text = monster.name
         return cell
     }
- 
+    
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let selectedMonster = self.monsters[indexPath.row]
+        self.delegate?.monsterSelected(newMonster: selectedMonster)
+        if let detailViewController = self.delegate as? DetailViewController {
+            splitViewController?.showDetailViewController(detailViewController.navigationController!, sender: nil)
+        }
+    }
 
     /*
     // Override to support conditional editing of the table view.

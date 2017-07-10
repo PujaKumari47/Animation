@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Foundation
 
 class DetailViewController: UIViewController {
     
@@ -46,4 +47,10 @@ class DetailViewController: UIViewController {
     }
     */
 
+}
+
+extension DetailViewController: MonsterSelectionDelegate {
+    func monsterSelected(newMonster: Monster) {
+        monster = newMonster
+    }
 }
