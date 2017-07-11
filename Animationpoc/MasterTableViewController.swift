@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import Lottie
+
 protocol MonsterSelectionDelegate: class {
     func monsterSelected(newMonster: Monster)
 }
@@ -15,25 +17,31 @@ class MasterTableViewController: UITableViewController {
     weak var delegate: MonsterSelectionDelegate?
     override func viewDidLoad() {
         super.viewDidLoad()
+        //implementLottie()
         
         
+    }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+         //animateTable()
     }
     required init(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)!
         
         self.monsters.append(Monster(name: "Cat-Bot", description: "MEE-OW",
-                                     iconName: "Image.png", weapon: Weapon.Sword))
+                                     iconName: "Image.png", weapon: Weapon.Sword, animation: Animation.Like))
         self.monsters.append(Monster(name: "Dog-Bot", description: "BOW-WOW",
-                                     iconName: "Image-1.png", weapon: Weapon.Blowgun))
+                                     iconName: "Image-1.png", weapon: Weapon.Blowgun, animation: Animation.Dislike))
         self.monsters.append(Monster(name: "Explode-Bot", description: "BOOM!",
-                                     iconName: "ninjastar.png", weapon: Weapon.Smoke))
+                                     iconName: "ninjastar.png", weapon: Weapon.Smoke, animation: Animation.Pagination))
         self.monsters.append(Monster(name: "Fire-Bot", description: "Will Make You Stamed",
-                                     iconName: "smoke.png", weapon: Weapon.NinjaStar))
+                                     iconName: "smoke.png", weapon: Weapon.NinjaStar, animation: Animation.Submit))
         self.monsters.append(Monster(name: "Ice-Bot", description: "Has A Chilling Effect",
-                                     iconName: "sword.png", weapon: Weapon.Fire))
+                                     iconName: "sword.png", weapon: Weapon.Fire, animation: Animation.Twitter))
         self.monsters.append(Monster(name: "Mini-Tomato-Bot", description: "Extremely Handsome",
-                                     iconName: "fire.png", weapon: Weapon.NinjaStar))
+                                     iconName: "fire.png", weapon: Weapon.NinjaStar, animation: Animation.Twitter))
     }
+    
     
 
     // MARK: - Table view data source & delegate Methods
@@ -65,7 +73,25 @@ class MasterTableViewController: UITableViewController {
             splitViewController?.showDetailViewController(detailViewController.navigationController!, sender: nil)
         }
     }
-
+    
+    
+    
+    func animateTable() {
+        tableView.reloadData()
+        let cells = tableView.visibleCells
+        let tableViewHeight = tableView.bounds.size.height
+        
+        for cell in cells {
+            cell.transform = CGAffineTransform(translationX: 0, y: tableViewHeight)
+        }
+        var delayCounter = 0
+        for cell in cells {
+            UIView.animate(withDuration: 1.75, delay: Double(delayCounter) * 0.05, usingSpringWithDamping: 0.8, initialSpringVelocity: 0, options: .curveEaseInOut, animations: {
+                cell.transform = CGAffineTransform.identity
+            }, completion: nil)
+            delayCounter += 1
+        }
+    }
     /*
     // Override to support conditional editing of the table view.
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {

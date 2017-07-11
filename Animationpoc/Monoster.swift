@@ -8,10 +8,14 @@
 
 import Foundation
 import UIKit
+import Lottie
 
 //an enum that defines a number of weapon options
 enum Weapon {
     case Blowgun, NinjaStar, Fire, Sword, Smoke
+}
+enum Animation {
+    case Submit,Like,Dislike,Pagination,Twitter
 }
 
 class Monster {
@@ -19,13 +23,15 @@ class Monster {
     let description: String
     let iconName: String
     let weapon: Weapon
+    let animation: Animation
     
     // designated initializer for a Monster
-    init(name: String, description: String, iconName: String, weapon: Weapon) {
+    init(name: String, description: String, iconName: String, weapon: Weapon,animation: Animation) {
         self.name = name
         self.description = description
         self.iconName = iconName
         self.weapon = weapon
+        self.animation = animation
     }
     
     // Convenience method for fetching a monster's weapon image
@@ -43,4 +49,22 @@ class Monster {
             return UIImage(named: "sword.png")
         }
     }
-}
+    
+    func animationUrl() -> URL? {
+        switch self.animation {
+        case .Submit:
+            return URL(string: "https://github.com/airbnb/lottie-ios/raw/master/Example/Assets/PinJump.json")!
+        case .Like:
+            return URL(string: "https://github.com/airbnb/lottie-ios/raw/master/Example/Assets/HamburgerArrow.json")!
+        case .Dislike:
+            return URL(string: "https://github.com/airbnb/lottie-ios/raw/master/Example/Assets/TwitterHeart.json")!
+        case .Pagination:
+            return URL(string: "https://github.com/airbnb/lottie-ios/raw/master/Example/Assets/Watermelon.json")!
+        case .Twitter:
+        return URL(string: "https://github.com/airbnb/lottie-ios/raw/master/Example/Assets/LottieLogo1.json")!
+        }
+    }
+    }
+    
+   
+
