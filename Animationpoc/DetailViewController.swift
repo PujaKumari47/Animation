@@ -50,11 +50,18 @@ class DetailViewController: UIViewController {
             subview!.removeFromSuperview()
         }
     }
+    func getDeviceWidth() -> CGFloat {
+        return UIScreen.main.bounds.width
+    }
+    
+    func getDeviceHeight() -> CGFloat {
+        return UIScreen.main.bounds.height
+    }
     func implementLottie() {
         removeSubview(subview: animationView)
         animationView = LOTAnimationView(contentsOf: monster.animationUrl()!)
         
-        animationView.frame = CGRect(x: 0, y: 0, width: 400, height: 400)
+        animationView.frame = CGRect(x: 0, y: 0, width: getDeviceWidth(), height: getDeviceHeight())
         animationView.center = self.view.center
         animationView.contentMode = .scaleAspectFill
         animationView.loopAnimation = true

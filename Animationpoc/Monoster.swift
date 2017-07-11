@@ -17,6 +17,9 @@ enum Weapon {
 enum Animation {
     case Submit,Like,Dislike,Pagination,Twitter
 }
+enum AnimationLottie {
+    case Loading,Error,Handling,Reloading,Reading
+}
 
 class Monster {
     let name: String
@@ -24,14 +27,17 @@ class Monster {
     let iconName: String
     let weapon: Weapon
     let animation: Animation
+    let animationString: AnimationLottie
+    
     
     // designated initializer for a Monster
-    init(name: String, description: String, iconName: String, weapon: Weapon,animation: Animation) {
+    init(name: String, description: String, iconName: String, weapon: Weapon,animation: Animation,animationString:AnimationLottie) {
         self.name = name
         self.description = description
         self.iconName = iconName
         self.weapon = weapon
         self.animation = animation
+        self.animationString = animationString
     }
     
     // Convenience method for fetching a monster's weapon image
@@ -62,6 +68,21 @@ class Monster {
             return URL(string: "https://github.com/airbnb/lottie-ios/raw/master/Example/Assets/Watermelon.json")!
         case .Twitter:
         return URL(string: "https://github.com/airbnb/lottie-ios/raw/master/Example/Assets/LottieLogo1.json")!
+        }
+    }
+    
+    func animationLottie() -> String? {
+        switch self.animationString {
+        case .Loading:
+            return "servishero_loading"
+        case .Error:
+            return "servishero_loading"
+        case .Handling:
+            return "servishero_loading"
+        case .Reloading:
+            return "servishero_loading"
+        case .Reading:
+            return "servishero_loading"
         }
     }
     }
