@@ -7,5 +7,6 @@ target 'Animationpoc' do
 
   # Pods for Animationpoc
    pod 'lottie-ios'
+   pod 'SlideMenuControllerSwift'
 
 end

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SlideMenuControllerSwift
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -16,17 +17,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-        let splitViewController = self.window!.rootViewController as! UISplitViewController
-        let leftNavController = splitViewController.viewControllers.first as! UINavigationController
-        let masterTableViewController = leftNavController.topViewController as! MasterTableViewController
-        let rightNavController = splitViewController.viewControllers.last as! UINavigationController
-        let detailViewController = rightNavController.topViewController as! DetailViewController
-        detailViewController.navigationItem.leftItemsSupplementBackButton = true
-        detailViewController.navigationItem.leftBarButtonItem = splitViewController.displayModeButtonItem
+//        let splitViewController = self.window!.rootViewController as! UISplitViewController
+//        let leftNavController = splitViewController.viewControllers.first as! UINavigationController
+//        let masterTableViewController = leftNavController.topViewController as! MasterTableViewController
+//        let rightNavController = splitViewController.viewControllers.last as! UINavigationController
+//        let detailViewController = rightNavController.topViewController as! DetailViewController
+//        detailViewController.navigationItem.leftItemsSupplementBackButton = true
+//        detailViewController.navigationItem.leftBarButtonItem = splitViewController.displayModeButtonItem
+//
+//        let firstMonster = masterTableViewController.monsters.first
+//        detailViewController.monster = firstMonster
+//        masterTableViewController.delegate = detailViewController
+        // create viewController code...
         
-        let firstMonster = masterTableViewController.monsters.first
-        detailViewController.monster = firstMonster
-        masterTableViewController.delegate = detailViewController
+        let slideMenuController = SlideMenuController(mainViewController: mainViewController, leftMenuViewController: leftViewController, rightMenuViewController: rightViewController)
+        self.window?.rootViewController = slideMenuController
+        self.window?.makeKeyAndVisible()
         return true
         
     }

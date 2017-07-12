@@ -28,18 +28,24 @@ class MasterTableViewController: UITableViewController {
     required init(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)!
         
-        self.monsters.append(Monster(name: "Cat-Bot", description: "MEE-OW",
-                                     iconName: "Image.png", weapon: Weapon.Sword, animation: Animation.Like, animationString: AnimationLottie.Error))
-        self.monsters.append(Monster(name: "Dog-Bot", description: "BOW-WOW",
-                                     iconName: "Image-1.png", weapon: Weapon.Blowgun, animation: Animation.Dislike, animationString: AnimationLottie.Handling))
-        self.monsters.append(Monster(name: "Explode-Bot", description: "BOOM!",
-                                     iconName: "ninjastar.png", weapon: Weapon.Smoke, animation: Animation.Pagination, animationString: AnimationLottie.Loading))
-        self.monsters.append(Monster(name: "Fire-Bot", description: "Will Make You Stamed",
-                                     iconName: "smoke.png", weapon: Weapon.NinjaStar, animation: Animation.Submit, animationString: AnimationLottie.Reading))
-        self.monsters.append(Monster(name: "Ice-Bot", description: "Has A Chilling Effect",
-                                     iconName: "sword.png", weapon: Weapon.Fire, animation: Animation.Twitter, animationString: AnimationLottie.Reloading))
-        self.monsters.append(Monster(name: "Mini-Tomato-Bot", description: "Extremely Handsome",
-                                     iconName: "fire.png", weapon: Weapon.NinjaStar, animation: Animation.Twitter, animationString: AnimationLottie.Reloading))
+        self.monsters.append(Monster(name: "feedBack", description: "MEE-OW",
+                                     iconName: "Image.png", weapon: Weapon.Sword, animationString: AnimationLottie.Loading))
+        self.monsters.append(Monster(name: "Send", description: "BOW-WOW",
+                                     iconName: "Image-1.png", weapon: Weapon.Blowgun,  animationString: AnimationLottie.Error))
+        self.monsters.append(Monster(name: "Loader", description: "BOOM!",
+                                     iconName: "ninjastar.png", weapon: Weapon.Smoke,  animationString: AnimationLottie.Handling))
+        self.monsters.append(Monster(name: "wifiWiper", description: "Will Make You Stamed",
+                                     iconName: "smoke.png", weapon: Weapon.NinjaStar, animationString: AnimationLottie.Reading))
+        self.monsters.append(Monster(name: "Update", description: "Has A Chilling Effect",
+                                     iconName: "sword.png", weapon: Weapon.Fire,  animationString: AnimationLottie.Reloading))
+        self.monsters.append(Monster(name: "SimpleCheck", description: "Extremely Handsome",
+                                     iconName: "fire.png", weapon: Weapon.NinjaStar,  animationString: AnimationLottie.Stars))
+        
+        self.monsters.append(Monster(name: "Setting", description: "Extremely Handsome",
+                                     iconName: "fire.png", weapon: Weapon.NinjaStar,  animationString: AnimationLottie.Setting))
+        self.monsters.append(Monster(name: "SimpleLoader", description: "Extremely Handsome",
+                                     iconName: "fire.png", weapon: Weapon.NinjaStar,  animationString: AnimationLottie.SimpleLoader))
+        
     }
     
     

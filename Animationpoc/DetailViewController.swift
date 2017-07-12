@@ -59,7 +59,7 @@ class DetailViewController: UIViewController {
     }
     func implementLottie() {
         removeSubview(subview: animationView)
-        animationView = LOTAnimationView(contentsOf: monster.animationUrl()!)
+        animationView = LOTAnimationView(name: monster.animationLottie()!)
         
         animationView.frame = CGRect(x: 0, y: 0, width: getDeviceWidth(), height: getDeviceHeight())
         animationView.center = self.view.center
